@@ -1,4 +1,8 @@
 #!/bin/bash
+./install-rbenv
+./install-rails
+
+
 cd
 mkdir ~/bin
 cd bin
