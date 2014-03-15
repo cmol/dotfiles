@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+
+gem install rails
+
+rbenv rehash
+
+rails -v
