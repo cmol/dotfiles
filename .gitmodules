@@ -1,0 +1,12 @@
+[submodule "home/.oh-my-zsh"]
+	path = home/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.janus/vim-arduino-ino"]
+	path = home/.janus/vim-arduino-ino
+	url = git@github.com:jplaut/vim-arduino-ino.git
+[submodule "home/.janus/ansible-yaml"]
+	path = home/.janus/ansible-yaml
+	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "home/.janus/vim-latex"]
+	path = home/.janus/vim-latex
+	url = git@github.com:micheljansen/vim-latex.git
