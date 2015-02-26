@@ -20,7 +20,7 @@ git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
 chsh -s $(which zsh)
 
 # Things to run locally only
-if [[ -n "$SSH_CLIENT" ]]; then
+if [[ -z "$SSH_CLIENT" ]]; then
   # Create dirs
   mkdir -p ~/bin
   cd ~/bin
