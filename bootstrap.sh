@@ -12,7 +12,7 @@ homesick clone cmol/dotfiles
 homesick link dotfiles
 
 # Install rbenv
-git clone git://github.com/sstephenson/rbenv.git .rbenv
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
 
