@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install files and setups
-sudo apt-get install -y zsh git vim ack-grep exuberant-ctags tmux mosh rake curl
+sudo apt-get install -y zsh git vim ack-grep exuberant-ctags tmux mosh rake curl most
 sudo gem install homesick
 
 # Install Janus
