@@ -57,6 +57,10 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 eval "$(rbenv init -)"
 eval "$(dircolors ~/.dircolors)"
 
+# todo.sh - completion, alias
+alias t="todo.sh"
+source ~/.todo/todo_completion
+
 # Setup stuff
 EDITOR="vim"
 PAGER="most"
