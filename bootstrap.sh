@@ -12,21 +12,26 @@ homesick clone cmol/dotfiles
 homesick link dotfiles
 
 # Install rbenv
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv || echo "[rbenv] Already installed. Updating..." cd ~/.rbenv ; git pull --rebase
+git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build || cd ~/.rbenv/plugins/ruby-build ; git pull --rebase
+git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset || ~/.rbenv/plugins/rbenv-gemset ; git pull --rebase
 
 # Change shell to zsh
-chsh -s $(which zsh)
+chsh -s $(which zsh) && echo "Shell changed. You may need to log out and log in again for this to take effect."
+
+# Create dirs
+mkdir -p ~/bin
+
+# Clone repos
+cd ~/bin
+git clone git@github.com:powerline/powerline.git || echo "[powerline] Already downloaded. Updating..."; cd powerline; git pull --rebase; cd ..
 
 # Things to run locally only
 if [[ -z "$SSH_CLIENT" ]]; then
-  # Create dirs
-  mkdir -p ~/bin
-  cd ~/bin
 
   # Setup gnome-terminal
-  git clone git@github.com:sigurdga/gnome-terminal-colors-solarized.git
+  git clone git@github.com:sigurdga/gnome-terminal-colors-solarized.git || echo "[gnome-terminal-colors-solarized] Already downloaded. Updating..."; cd gnome-terminal-colors-solarized ; git pull --rebase; cd ..
+
   cd gnome-terminal-colors-solarized
   ./set_dark.sh
 
@@ -34,8 +39,9 @@ if [[ -z "$SSH_CLIENT" ]]; then
   mkdir ~/.fonts
   cd ~/.fonts
   wget --no-check-certificate https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -O InconsolataForPowerline.otf
-
-  # List ruby-versions
-  exec $SHELL
-  rbenv install --list
+  echo "Please change to a powerline font in your terminal.."
 fi
+
+# List ruby-versions
+exec $SHELL
+rbenv install --list
