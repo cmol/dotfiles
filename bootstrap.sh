@@ -5,19 +5,16 @@ sudo apt-get install -y zsh git vim ack-grep exuberant-ctags tmux mosh rake curl
 sudo gem install homesick
 
 # Install Janus
-curl -Lo- https://bit.ly/janus-bootstrap | bash
+cd ~/.vim/janus || curl -Lo- https://bit.ly/janus-bootstrap | bash
 
 # Install dotfiles
 homesick clone cmol/dotfiles
 homesick link dotfiles
 
 # Install rbenv
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv || echo "[rbenv] Already installed. Updating..." cd ~/.rbenv ; git pull --rebase
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv || echo "[rbenv] Already installed. Updating..."; cd ~/.rbenv ; git pull --rebase
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build || cd ~/.rbenv/plugins/ruby-build ; git pull --rebase
 git clone git://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset || ~/.rbenv/plugins/rbenv-gemset ; git pull --rebase
-
-# Change shell to zsh
-chsh -s $(which zsh) && echo "Shell changed. You may need to log out and log in again for this to take effect."
 
 # Create dirs
 mkdir -p ~/bin
@@ -41,6 +38,9 @@ if [[ -z "$SSH_CLIENT" ]]; then
   wget --no-check-certificate https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -O InconsolataForPowerline.otf
   echo "Please change to a powerline font in your terminal.."
 fi
+
+# Change shell to zsh
+sudo chsh -s $(which zsh) $USER && echo "Shell changed. You may need to log out and log in again for this to take effect."
 
 # List ruby-versions
 exec $SHELL
