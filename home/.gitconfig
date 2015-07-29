@@ -1,6 +1,7 @@
 [user]
 	name = Claus Lensbøl
 	email = cmol@cmol.dk
+	signingkey = cmol@keybase.io
 [color]
 	branch = auto
 	diff = auto
