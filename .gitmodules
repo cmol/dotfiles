@@ -10,3 +10,6 @@
 [submodule "home/.janus/vim-latex"]
 	path = home/.janus/vim-latex
 	url = git@github.com:micheljansen/vim-latex.git
+[submodule "home/.janus/tabular"]
+	path = home/.janus/tabular
+	url = git://github.com/godlygeek/tabular.git
