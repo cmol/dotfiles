@@ -61,7 +61,11 @@ eval "$(dircolors ~/.dircolors)"
 alias t="todo.sh"
 source ~/.todo/todo_completion
 
+# Docker alias
+#alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
+
 # Setup stuff
 EDITOR="vim"
 PAGER="most"
 JAVA_HOME="/usr/lib/jvm/java-7-oracle/jre/"
+export PYTHONPATH="/home/cmol/DTU/02450_Machine_Learning/02450Toolbox_Python/Tools"
