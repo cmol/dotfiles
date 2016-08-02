@@ -1,3 +1,7 @@
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 source ~/bin/powerline/powerline/bindings/vim/plugin/powerline.vim
+
+syntax enable
+set background=dark
+colorscheme solarized
