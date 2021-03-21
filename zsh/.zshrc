@@ -99,6 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Instantiate dircolors
+eval $(dircolors ~/.dircolors)
+
 # Remove snap stuff
 alias df='df -x"squashfs"'
 
