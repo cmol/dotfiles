@@ -17,6 +17,9 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Git
   Plug 'tpope/vim-fugitive'
+  
+  " Go
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()" Everything after this line will be the config section
 
