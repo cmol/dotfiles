@@ -11,6 +11,7 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Fuzzy finding
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
   " Statusline
   Plug 'itchyny/lightline.vim'
