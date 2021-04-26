@@ -21,6 +21,9 @@ call plug#begin("~/.config/nvim/plugged")
   " Go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+  " Git gutter (inline diff)
+  Plug 'airblade/vim-gitgutter'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
