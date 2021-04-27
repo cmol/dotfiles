@@ -6,7 +6,7 @@ call plug#begin("~/.config/nvim/plugged")
   " File manager
   Plug 'preservim/nerdtree'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'Xuyuanp/nerdtree-git-plugin' 
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   "Plug 'ryanoasis/vim-devicons'
 
   " Fuzzy finding
@@ -18,12 +18,15 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Git
   Plug 'tpope/vim-fugitive'
-  
+
   " Go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
   " Git gutter (inline diff)
   Plug 'airblade/vim-gitgutter'
+
+  " Tabularize
+  Plug 'godlygeek/tabular'
 
 call plug#end()" Everything after this line will be the config section
 
@@ -49,9 +52,9 @@ nnoremap <leader>pv :NERDTreeFind<bar> :vertical resize 30<CR>
 
 " NERDTree Syntax Highlight
 " " Enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFolders = 1 
+let g:NERDTreeHighlightFolders = 1
 " " Highlights the folder name
-let g:NERDTreeHighlightFoldersFullName = 1 
+let g:NERDTreeHighlightFoldersFullName = 1
 " " Color customization
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"
@@ -72,21 +75,21 @@ let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
 " " This line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor = {} 
+let g:NERDTreeExtensionHighlightColor = {}
 " " Sets the color of css files to blue
-let g:NERDTreeExtensionHighlightColor['css'] = s:blue 
+let g:NERDTreeExtensionHighlightColor['css'] = s:blue
 " " This line is needed to avoid error
-let g:NERDTreeExactMatchHighlightColor = {} 
+let g:NERDTreeExactMatchHighlightColor = {}
 " " Sets the color for .gitignore files
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange 
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange
 " " This line is needed to avoid error
-let g:NERDTreePatternMatchHighlightColor = {} 
+let g:NERDTreePatternMatchHighlightColor = {}
 " " Sets the color for files ending with _spec.rb
-let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red 
+let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red
 " " Sets the color for folders that did not match any rule
-let g:WebDevIconsDefaultFolderSymbolColor = s:beige 
+let g:WebDevIconsDefaultFolderSymbolColor = s:beige
 " " Sets the color for files that did not match any rule
-let g:WebDevIconsDefaultFileSymbolColo	 = s:blue 
+let g:WebDevIconsDefaultFileSymbolColo	 = s:blue
 
 " NERDTree Git Plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -130,10 +133,10 @@ set nowrap " set no soft wrap
 set tabstop=2 softtabstop=2 " set tab size
 set shiftwidth=2 " affect amount of indentation
 set expandtab " set that tab will insert softabstop amount of space characters
-set nowritebackup " set to never save backup                                 
-set noswapfile " set no swap file 
+set nowritebackup " set to never save backup
+set noswapfile " set no swap file
 set nobackup " set no backup file
-set breakindent " set every wrapped line will continue visually indented                    
+set breakindent " set every wrapped line will continue visually indented
 set smartindent " set smart indentation
 set smartcase " set to be cas sensitive when there is capital letter, this need set incsearch to work
 set incsearch " set search to be case insensitive
@@ -162,3 +165,7 @@ inoremap <C-k> <ESC>:m .-2<CR>==gi
 " " Visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Show trailing whitespaces
+set list
+set listchars=trail:~,tab:>-,nbsp:␣
