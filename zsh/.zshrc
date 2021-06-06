@@ -113,4 +113,7 @@ zstyle ':completion:*:ssh:*' hosts off
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Source go install directory
+export PATH=$PATH:/usr/local/go/bin
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
