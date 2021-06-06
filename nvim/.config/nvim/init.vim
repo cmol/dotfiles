@@ -168,4 +168,4 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Show trailing whitespaces
 set list
-set listchars=trail:~,tab:>-,nbsp:␣
+set listchars=trail:·,tab:→\ ,nbsp:␣
