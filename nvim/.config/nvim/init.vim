@@ -7,7 +7,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'preservim/nerdtree'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  "Plug 'ryanoasis/vim-devicons'
+  Plug 'ryanoasis/vim-devicons'
 
   " Fuzzy finding
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
