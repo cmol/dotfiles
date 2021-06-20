@@ -116,4 +116,4 @@ eval "$(rbenv init -)"
 # Source go install directory
 export PATH=$PATH:/usr/local/go/bin
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
