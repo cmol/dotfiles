@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # General
-sudo apt install -y curl stow
+sudo apt install -y curl stow git zsh
 
 # Ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
@@ -12,6 +12,13 @@ sudo apt-get install -y libssl-dev
 cd /tmp
 wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+cd -
+
+# Font
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete%20Mono.ttf
+fc-cache -f -v
 cd -
 
 # Oh My ZSH
