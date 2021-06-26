@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # General
-sudo apt install -y curl stow git zsh
+sudo apt install -y curl stow git zsh tmux
 
 # Ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
