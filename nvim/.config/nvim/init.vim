@@ -28,6 +28,9 @@ call plug#begin("~/.config/nvim/plugged")
   " Tabularize
   Plug 'godlygeek/tabular'
 
+  " Ansible support
+  Plug 'pearofducks/ansible-vim'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
