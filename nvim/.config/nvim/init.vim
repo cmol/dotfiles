@@ -173,4 +173,9 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Show trailing whitespaces
 set list
-set listchars=trail:·,tab:→\ ,nbsp:␣
+set listchars=trail:·,tab:\ \ ,nbsp:␣
+
+:highlight ExtraWhitespace guibg=#073642
+:match ExtraWhitespace /\t/
+":match ExtraWhitespace /\s\+$/
+
