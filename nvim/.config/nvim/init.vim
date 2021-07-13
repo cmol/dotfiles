@@ -31,6 +31,9 @@ call plug#begin("~/.config/nvim/plugged")
   " Ansible support
   Plug 'pearofducks/ansible-vim'
 
+  " Ctags
+  Plug 'ludovicchabant/vim-gutentags'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
