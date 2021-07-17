@@ -37,3 +37,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 stow nvim
 echo "Please open nvim and run \"PlugInstall\""
+
+# dircolors
+stow dircolors
+
+# tmux
+stow tmux
