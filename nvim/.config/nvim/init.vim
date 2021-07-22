@@ -34,6 +34,12 @@ call plug#begin("~/.config/nvim/plugged")
   " Ctags
   Plug 'ludovicchabant/vim-gutentags'
 
+  " tmux
+  "Plug 'edkolev/tmuxline.vim'
+
+  " Smart indentation detection
+  Plug 'tpope/vim-sleuth'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
