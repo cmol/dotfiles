@@ -2,6 +2,8 @@
 call plug#begin("~/.config/nvim/plugged")
   " Plugin Section
   Plug 'lifepillar/vim-solarized8'
+  Plug 'shaunsingh/solarized.nvim'
+  Plug 'shaunsingh/nord.nvim'
 
   " File manager
   Plug 'preservim/nerdtree'
@@ -39,6 +41,9 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Smart indentation detection
   Plug 'tpope/vim-sleuth'
+
+  " Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 call plug#end()" Everything after this line will be the config section
 
