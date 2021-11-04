@@ -23,6 +23,7 @@ call plug#begin("~/.config/nvim/plugged")
 
   " Go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'buoto/gotests-vim'
 
   " Git gutter (inline diff)
   Plug 'airblade/vim-gitgutter'
