@@ -164,12 +164,20 @@ set hidden
 set updatetime=250
 set shortmess+=c " for CoC plugin
 set noshowmode " set that vim mode is hidden, to incorporate for lightline plugin
-let mapleader=" "
+let mapleader=","
 " " Panel switching
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
+
+" " Golang debug statements
+nmap <leader>gdb :GoDebugBreakpoint<CR>
+nmap <leader>gdt :GoDebugTest<CR>
+nmap <leader>gdr :GoDebugStart<CR>
+nmap <leader>gdc :GoDebugContinue<CR>
+nmap <leader>gds :GoDebugStop<CR>
+
 " " Split panel
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
