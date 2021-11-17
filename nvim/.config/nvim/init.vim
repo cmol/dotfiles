@@ -177,6 +177,11 @@ nmap <leader>gdt :GoDebugTest<CR>
 nmap <leader>gdr :GoDebugStart<CR>
 nmap <leader>gdc :GoDebugContinue<CR>
 nmap <leader>gds :GoDebugStop<CR>
+nmap <leader>gt  :GoTest<CR>
+nmap <leader>gr  :GoRun<CR>
+nmap <leader>gie :GoIfErr<CR>
+nmap <leader>gc  :GoCoverage<CR>
+nmap <leader>gct :GoCoverageToggle<CR>
 
 " " Split panel
 nnoremap <leader>v <C-w>v
