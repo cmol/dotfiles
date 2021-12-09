@@ -172,16 +172,19 @@ map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 
 " " Golang debug statements
-nmap <leader>gdb :GoDebugBreakpoint<CR>
-nmap <leader>gdt :GoDebugTest<CR>
-nmap <leader>gdr :GoDebugStart<CR>
-nmap <leader>gdc :GoDebugContinue<CR>
-nmap <leader>gds :GoDebugStop<CR>
-nmap <leader>gt  :GoTest<CR>
-nmap <leader>gr  :GoRun<CR>
-nmap <leader>gie :GoIfErr<CR>
-nmap <leader>gc  :GoCoverage<CR>
-nmap <leader>gct :GoCoverageToggle<CR>
+autocmd FileType go nmap <leader>db :GoDebugBreakpoint<CR>
+autocmd FileType go nmap <leader>dt :GoDebugTest<CR>
+autocmd FileType go nmap <leader>dr :GoDebugStart<CR>
+autocmd FileType go nmap <leader>dc :GoDebugContinue<CR>
+autocmd FileType go nmap <leader>ds :GoDebugStop<CR>
+autocmd FileType go nmap <leader>t  :GoTest<CR>
+autocmd FileType go nmap <leader>r  :GoRun<CR>
+autocmd FileType go nmap <leader>ie :GoIfErr<CR>
+autocmd FileType go nmap <leader>c  :GoCoverage<CR>
+autocmd FileType go nmap <leader>ct :GoCoverageToggle<CR>
+
+" Remove scratch buffer from omnifunc
+set completeopt-=preview
 
 " " Split panel
 nnoremap <leader>v <C-w>v
