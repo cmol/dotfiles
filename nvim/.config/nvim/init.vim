@@ -186,6 +186,9 @@ autocmd FileType go nmap <leader>ct :GoCoverageToggle<CR>
 " Remove scratch buffer from omnifunc
 set completeopt-=preview
 
+" Exit intert mode in terminal on <esc>
+:tnoremap <Esc> <C-\><C-n>
+
 " " Split panel
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
