@@ -185,6 +185,7 @@ autocmd FileType go nmap <leader>r  :GoRun<CR>
 autocmd FileType go nmap <leader>ie :GoIfErr<CR>
 autocmd FileType go nmap <leader>c  :GoCoverage<CR>
 autocmd FileType go nmap <leader>ct :GoCoverageToggle<CR>
+autocmd FileType go nmap <leader>p :GoDeclsDir<CR>
 
 " Enable blamer
 let g:blamer_enabled = 1
