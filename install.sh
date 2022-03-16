@@ -10,8 +10,8 @@ sudo apt-get install -y libssl-dev
 
 # Go
 cd /tmp
-wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.18.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 cd -
 
 # Font
