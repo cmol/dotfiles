@@ -220,3 +220,6 @@ set listchars=trail:·,tab:\ \ ,nbsp:␣
 :match ExtraWhitespace /\t/
 ":match ExtraWhitespace /\s\+$/
 
+" Simplify window separation
+:highlight WinSeparator guibg=None
+" set laststatus=3
