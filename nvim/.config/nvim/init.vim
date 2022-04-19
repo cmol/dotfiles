@@ -46,6 +46,9 @@ call plug#begin("~/.config/nvim/plugged")
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
+  " git blamer
+  Plug 'APZelos/blamer.nvim'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
@@ -183,6 +186,9 @@ autocmd FileType go nmap <leader>ie :GoIfErr<CR>
 autocmd FileType go nmap <leader>c  :GoCoverage<CR>
 autocmd FileType go nmap <leader>ct :GoCoverageToggle<CR>
 autocmd FileType go nmap <leader>p  :GoDeclsDir<CR>
+
+" Enable blamer
+let g:blamer_enabled = 1
 
 " Remove scratch buffer from omnifunc
 set completeopt-=preview
