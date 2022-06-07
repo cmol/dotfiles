@@ -309,7 +309,6 @@ EOF
 "
 fun! GoFumpt()
   :silent !gofumpt -w %
-  :edit
 endfun
 autocmd FileType go map <buffer> <leader>p :call append(".", "fmt.Printf(\"%+v\\n\", )")<CR> <bar> :norm $a<CR><esc>j==$i
 autocmd FileType go map <buffer> <leader>e :call append(".", "if err != nil {return err}")<CR> <bar> :w<CR>
