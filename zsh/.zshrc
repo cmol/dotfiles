@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-    export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -10,7 +11,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
-DEFAULT_USER="cmol"
+DEFAULT_USER="$USER"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,10 +101,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Instantiate dircolors
-eval $(dircolors ~/.dircolors)
+if [ "$(uname)" = "Linux" ]; then
+  eval $(dircolors ~/.dircolors)
+fi
 
 # Remove snap stuff
-alias df='df -x"squashfs"'
+if [ "$(uname)" = "Linux" ]; then
+  alias df='df -x"squashfs"'
+fi
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
