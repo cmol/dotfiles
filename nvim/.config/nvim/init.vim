@@ -34,9 +34,6 @@ call plug#begin("~/.config/nvim/plugged")
   " Ansible support
   Plug 'pearofducks/ansible-vim'
 
-  " Ctags
-  Plug 'ludovicchabant/vim-gutentags'
-
   " tmux
   "Plug 'edkolev/tmuxline.vim'
 
