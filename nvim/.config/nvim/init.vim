@@ -283,7 +283,7 @@ lua require("trouble").setup()
 "
 lua <<EOF
 require('lspconfig').gopls.setup{
-	cmd = {'gopls'},
+  cmd = {'gopls'},
   settings = {
     gopls = {
       analyses = {
@@ -298,8 +298,9 @@ require('lspconfig').gopls.setup{
       usePlaceholders = true,
     },
   },
-	on_attach = on_attach,
+  on_attach = on_attach,
 }
+require('lspconfig').solargraph.setup{}
 EOF
 
 " Configure Golang Environment.
