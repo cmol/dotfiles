@@ -239,7 +239,8 @@ set listchars=trail:·,tab:\ \ ,nbsp:␣
 :highlight WinSeparator guibg=None
 " set laststatus=3
 
-
+" Basic clipboard integration
+set clipboard+=unnamedplus
 
 
 " LSP configurations
