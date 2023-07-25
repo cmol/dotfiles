@@ -57,7 +57,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
-  Plug 'j-hui/fidget.nvim'
+  Plug 'j-hui/fidget.nvim', {'tag': 'legacy'}
   Plug 'kosayoda/nvim-lightbulb'
   Plug 'm-demare/hlargs.nvim'
   Plug 'neovim/nvim-lspconfig'
