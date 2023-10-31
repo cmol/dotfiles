@@ -64,7 +64,9 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'weilbith/nvim-code-action-menu'
   Plug 'williamboman/nvim-lsp-installer'
 
+  Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 call plug#end()" Everything after this line will be the config section
 
@@ -152,6 +154,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
+nnoremap <C-g> :Telescope live_grep<CR>
 
 " Lightline
 let g:lightline = {
