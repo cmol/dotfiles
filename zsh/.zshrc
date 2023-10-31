@@ -66,7 +66,7 @@ DEFAULT_USER="$USER"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git svn command-not-found pass golang
+  git svn command-not-found pass golang gh
 )
 
 source $ZSH/oh-my-zsh.sh
