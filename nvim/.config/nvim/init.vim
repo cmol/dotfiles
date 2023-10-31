@@ -64,6 +64,8 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'weilbith/nvim-code-action-menu'
   Plug 'williamboman/nvim-lsp-installer'
 
+  Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
