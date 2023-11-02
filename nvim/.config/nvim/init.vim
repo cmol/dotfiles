@@ -68,6 +68,8 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+  Plug 'm4xshen/smartcolumn.nvim'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
@@ -422,4 +424,12 @@ require('nvim-treesitter.configs').setup {
   }
 }
 require('hlargs').setup()
+EOF
+
+lua <<EOF
+require("smartcolumn").setup {
+  custom_colorcolumn = {
+    ruby = "90"
+  }
+}
 EOF
