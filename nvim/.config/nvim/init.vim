@@ -181,6 +181,7 @@ set noswapfile " set no swap file
 set nobackup " set no backup file
 set breakindent " set every wrapped line will continue visually indented
 set smartindent " set smart indentation
+set ignorecase " set to be cas sensitive when there is capital letter, this need set incsearch to work
 set smartcase " set to be cas sensitive when there is capital letter, this need set incsearch to work
 set incsearch " set search to be case insensitive
 set hidden
