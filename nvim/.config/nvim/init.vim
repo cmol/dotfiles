@@ -70,6 +70,9 @@ call plug#begin("~/.config/nvim/plugged")
 
   Plug 'm4xshen/smartcolumn.nvim'
 
+  " sessions
+  Plug 'rmagatti/auto-session'
+
 call plug#end()" Everything after this line will be the config section
 
 " Color options
@@ -432,4 +435,8 @@ require("smartcolumn").setup {
     ruby = "90"
   }
 }
+EOF
+
+lua << EOF
+require('auto-session').setup()
 EOF
