@@ -253,7 +253,6 @@ set listchars=trail:·,tab:\ \ ,nbsp:␣
 " Basic clipboard integration
 set clipboard+=unnamedplus
 
-
 " LSP configurations
 "
 " ------------------------------------
