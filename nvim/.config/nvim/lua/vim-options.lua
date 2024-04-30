@@ -21,3 +21,7 @@ vim.keymap.set("n", "<leader>s", "<C-w>s", {})
 vim.cmd(":highlight ExtraWhitespace guibg=#073642")
 vim.cmd(":match ExtraWhitespace /\t/")
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", {})
+
+-- Trailing chars
+vim.cmd("set list")
+vim.cmd("set listchars=trail:·,tab:\\ \\ ,nbsp:␣")
