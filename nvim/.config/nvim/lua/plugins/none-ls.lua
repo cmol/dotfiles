@@ -14,6 +14,7 @@ return {
         null_ls.builtins.formatting.gofumpt,
         null_ls.builtins.diagnostics.rubocop,
         null_ls.builtins.diagnostics.golangci_lint,
+        null_ls.builtins.diagnostics.checkmake,
         require("none-ls.diagnostics.eslint_d"),
       },
     })
