@@ -25,3 +25,5 @@ vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", {})
 -- Trailing chars
 vim.cmd("set list")
 vim.cmd("set listchars=trail:·,tab:\\ \\ ,nbsp:␣")
+
+vim.cmd("set termguicolors")
