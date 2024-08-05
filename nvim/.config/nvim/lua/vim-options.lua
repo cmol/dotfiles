@@ -27,7 +27,8 @@ vim.keymap.set("n", "<leader>gnd", ":Git pull<CR>", {})
 vim.keymap.set("n", "<leader>gnf", ":Git fetch<CR>", {})
 vim.cmd(":highlight ExtraWhitespace guibg=#073642")
 vim.cmd(":match ExtraWhitespace /\t/")
-vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>", {})
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {})
+vim.keymap.set("t", "<leader><Esc>", "<Esc>", {})
 
 -- Trailing chars
 vim.cmd("set list")
