@@ -1,8 +1,7 @@
 return {
 	{
 		"j-hui/fidget.nvim",
-		opts = {
-		},
+		opts = {},
 	},
 	{
 		"williamboman/mason.nvim",
@@ -14,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "gopls", "solargraph" },
+				ensure_installed = { "lua_ls", "gopls", "solargraph", "ruby_lsp" },
 			})
 		end,
 	},
@@ -26,7 +25,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.solargraph.setup({
+			lspconfig.ruby_lsp.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
