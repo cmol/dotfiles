@@ -14,3 +14,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+vim.g.terminal_color_4 = "#268bd2"

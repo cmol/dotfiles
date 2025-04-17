@@ -13,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "gopls", "solargraph", "ruby_lsp" },
+				ensure_installed = { "lua_ls", "gopls", "solargraph", "ruby_lsp", "templ" },
 			})
 		end,
 	},
@@ -26,6 +26,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.ruby_lsp.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.templ.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
@@ -62,6 +65,7 @@ return {
 			vim.keymap.set("n", "[x", vim.diagnostic.goto_prev, {})
 			vim.keymap.set("n", "]x", vim.diagnostic.goto_next, {})
 			vim.keymap.set("n", "]s", vim.diagnostic.show, {})
+			vim.filetype.add({ extension = { templ = "templ" } })
 
 			-- " Replaced LSP implementation with code action plugin...
 			-- "
