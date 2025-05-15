@@ -123,3 +123,14 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set up keybindings for FZF
+if command -v fzf >/dev/null 2>&1; then
+  if fzf --zsh >/dev/null 2>&1; then
+    source <(fzf --zsh)
+    HISTFILE=~/.zsh_history
+    HISTSIZE=10000
+    SAVEHIST=10000
+    setopt appendhistory
+  fi
+fi
