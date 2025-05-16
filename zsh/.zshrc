@@ -134,3 +134,8 @@ if command -v fzf >/dev/null 2>&1; then
     setopt appendhistory
   fi
 fi
+#
+# Set up keybindings for FZF
+if command -v fzf >/dev/null 2>&1; then
+  source <(tailscale completion zsh)
+fi
