@@ -55,3 +55,10 @@ vim.api.nvim_create_autocmd("WinEnter", {
 
 -- Apply match to the current window immediately
 set_match()
+
+vim.diagnostic.config({
+  virtual_lines = {
+    -- Only show virtual line diagnostics for the current cursor line
+    current_line = true,
+  },
+})
