@@ -13,7 +13,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "gopls", "solargraph", "ruby_lsp", "templ" },
+        ensure_installed = { "lua_ls", "gopls", "ruby_lsp", "templ" },
       })
     end,
   },
