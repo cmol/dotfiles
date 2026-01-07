@@ -22,17 +22,13 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.ruby_lsp.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.templ.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.gopls.setup({
+      vim.lsp.config("lua_ls", { capabilities = capabilities })
+      vim.lsp.enable("lua_ls")
+      vim.lsp.config("ruby_lsp", { capabilities = capabilities })
+      vim.lsp.enable("ruby_lsp")
+      vim.lsp.config("templ", { capabilities = capabilities })
+      vim.lsp.enable("templ")
+      vim.lsp.config("gopls", {
         capabilities = capabilities,
         cmd = { "gopls" },
         settings = {
@@ -51,6 +47,8 @@ return {
         },
         on_attach = on_attach,
       })
+      vim.lsp.enable("gopls")
+
       local builtin = require('telescope.builtin')
       vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<c-k>", vim.lsp.buf.signature_help, {})
