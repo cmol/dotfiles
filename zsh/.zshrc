@@ -134,11 +134,14 @@ if command -v fzf >/dev/null 2>&1; then
     setopt appendhistory
   fi
 fi
-#
+
 # Set up keybindings for FZF
 if command -v fzf >/dev/null 2>&1; then
   source <(tailscale completion zsh)
 fi
+
+# Created by `pipx` on 2025-03-15 19:54:06
+export PATH="$PATH:/home/cmol/.local/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
